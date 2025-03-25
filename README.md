@@ -272,6 +272,3 @@ mvn test -Dtest=HotelServiceTest
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
