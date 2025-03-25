@@ -1,0 +1,1 @@
+// RoomType.java - auto generated

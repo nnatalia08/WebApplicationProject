@@ -1,0 +1,1 @@
+// RatingRepository.java - auto generated

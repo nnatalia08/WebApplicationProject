@@ -1,0 +1,1 @@
+// RoomResponseDTO.java - auto generated

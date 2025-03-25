@@ -1,0 +1,1 @@
+// Promotion.java - auto generated

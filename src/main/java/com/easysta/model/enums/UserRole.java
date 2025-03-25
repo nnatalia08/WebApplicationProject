@@ -1,0 +1,1 @@
+// UserRole.java - auto generated
