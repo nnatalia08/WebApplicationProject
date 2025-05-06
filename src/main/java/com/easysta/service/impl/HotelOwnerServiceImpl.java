@@ -1,1 +1,0 @@
-// HotelOwnerServiceImpl.java - auto generated

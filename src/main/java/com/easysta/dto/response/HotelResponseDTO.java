@@ -1,1 +1,0 @@
-// HotelResponseDTO.java - auto generated

@@ -1,1 +1,0 @@
-// Hotel.java - auto generated

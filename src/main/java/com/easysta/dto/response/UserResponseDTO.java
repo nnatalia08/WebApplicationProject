@@ -1,1 +1,0 @@
-// UserResponseDTO.java - auto generated

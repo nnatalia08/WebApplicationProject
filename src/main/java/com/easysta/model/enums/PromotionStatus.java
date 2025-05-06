@@ -1,1 +1,0 @@
-// PromotionStatus.java - auto generated

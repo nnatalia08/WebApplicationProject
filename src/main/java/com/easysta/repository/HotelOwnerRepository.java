@@ -1,1 +1,0 @@
-// HotelOwnerRepository.java - auto generated

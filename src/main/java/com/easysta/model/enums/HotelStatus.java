@@ -1,1 +1,0 @@
-// HotelStatus.java - auto generated

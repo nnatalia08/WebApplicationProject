@@ -1,1 +1,0 @@
-// RoomStatus.java - auto generated

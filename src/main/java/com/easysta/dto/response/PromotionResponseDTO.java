@@ -1,1 +1,0 @@
-// PromotionResponseDTO.java - auto generated

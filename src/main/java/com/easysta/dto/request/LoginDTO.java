@@ -1,1 +1,0 @@
-// LoginDTO.java - auto generated

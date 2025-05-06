@@ -1,1 +1,0 @@
-// HotelController.java - auto generated

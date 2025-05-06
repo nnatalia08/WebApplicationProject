@@ -1,1 +1,0 @@
-// EasyStayApplication.java - auto generated

@@ -1,1 +1,0 @@
-// RatingDTO.java - auto generated

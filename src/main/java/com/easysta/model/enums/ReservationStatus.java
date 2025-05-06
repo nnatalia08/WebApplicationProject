@@ -1,1 +1,0 @@
-// ReservationStatus.java - auto generated

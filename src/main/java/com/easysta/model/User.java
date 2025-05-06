@@ -1,1 +1,0 @@
-// User.java - auto generated

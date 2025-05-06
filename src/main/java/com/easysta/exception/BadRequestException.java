@@ -1,1 +1,0 @@
-// BadRequestException.java - auto generated

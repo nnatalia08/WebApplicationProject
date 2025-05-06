@@ -1,1 +1,0 @@
-// HotelServiceImpl.java - auto generated

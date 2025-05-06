@@ -1,1 +1,0 @@
-// RatingServiceImpl.java - auto generated

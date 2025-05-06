@@ -1,1 +1,0 @@
-// PromotionRepository.java - auto generated

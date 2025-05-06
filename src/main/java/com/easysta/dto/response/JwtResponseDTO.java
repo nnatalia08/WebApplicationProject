@@ -1,1 +1,0 @@
-// JwtResponseDTO.java - auto generated

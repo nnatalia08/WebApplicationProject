@@ -1,1 +1,0 @@
-// PromotionServiceImpl.java - auto generated

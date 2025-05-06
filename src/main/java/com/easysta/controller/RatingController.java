@@ -1,1 +1,0 @@
-// RatingController.java - auto generated
