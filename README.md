@@ -20,7 +20,6 @@ EasyStay is a comprehensive hotel booking platform that connects clients with ho
 - **API**: RESTful API
 - **Documentation**: Swagger/OpenAPI
 - **Authentication**: JWT (JSON Web Tokens)
-- **Testing**: JUnit, Mockito
 
 ## Project Structure
 The project follows a clean architecture with separation of concerns:
@@ -36,126 +35,113 @@ The project follows a clean architecture with separation of concerns:
 ```
 src/
 ├── main/
-│   ├── java/
-│   │   └── com/
-│   │       └── easysta/
-│   │           ├── config/
-│   │           │   ├── SecurityConfig.java
-│   │           │   ├── JwtConfig.java
-│   │           │   ├── WebConfig.java
-│   │           │   └── SwaggerConfig.java
-│   │           ├── controller/
-│   │           │   ├── AuthController.java
-│   │           │   ├── UserController.java
-│   │           │   ├── ClientController.java
-│   │           │   ├── HotelOwnerController.java
-│   │           │   ├── AdminController.java
-│   │           │   ├── HotelController.java
-│   │           │   ├── RoomController.java
-│   │           │   ├── ReservationController.java
-│   │           │   ├── RatingController.java
-│   │           │   └── PromotionController.java
-│   │           ├── dto/
-│   │           │   ├── request/
-│   │           │   │   ├── UserDTO.java
-│   │           │   │   ├── LoginDTO.java
-│   │           │   │   ├── HotelDTO.java
-│   │           │   │   ├── RoomDTO.java
-│   │           │   │   ├── ReservationDTO.java
-│   │           │   │   ├── RatingDTO.java
-│   │           │   │   └── PromotionDTO.java
-│   │           │   └── response/
-│   │           │       ├── UserResponseDTO.java
-│   │           │       ├── HotelResponseDTO.java
-│   │           │       ├── RoomResponseDTO.java
-│   │           │       ├── ReservationResponseDTO.java
-│   │           │       ├── RatingResponseDTO.java
-│   │           │       ├── PromotionResponseDTO.java
-│   │           │       ├── JwtResponseDTO.java
-│   │           │       └── ApiResponseDTO.java
-│   │           ├── exception/
-│   │           │   ├── GlobalExceptionHandler.java
-│   │           │   ├── ResourceNotFoundException.java
-│   │           │   ├── BadRequestException.java
-│   │           │   ├── UnauthorizedException.java
-│   │           │   └── ForbiddenException.java
-│   │           ├── model/
-│   │           │   ├── User.java
-│   │           │   ├── Client.java
-│   │           │   ├── HotelOwner.java
-│   │           │   ├── SystemAdmin.java
-│   │           │   ├── Hotel.java
-│   │           │   ├── Room.java
-│   │           │   ├── Reservation.java
-│   │           │   ├── Rating.java
-│   │           │   ├── Promotion.java
-│   │           │   └── enums/
-│   │           │       ├── UserRole.java
-│   │           │       ├── HotelStatus.java
-│   │           │       ├── RoomStatus.java
-│   │           │       ├── ReservationStatus.java
-│   │           │       ├── PaymentStatus.java
-│   │           │       ├── PromotionStatus.java
-│   │           │       └── RoomType.java
-│   │           ├── repository/
-│   │           │   ├── UserRepository.java
-│   │           │   ├── ClientRepository.java
-│   │           │   ├── HotelOwnerRepository.java
-│   │           │   ├── SystemAdminRepository.java
-│   │           │   ├── HotelRepository.java
-│   │           │   ├── RoomRepository.java
-│   │           │   ├── ReservationRepository.java
-│   │           │   ├── RatingRepository.java
-│   │           │   └── PromotionRepository.java
-│   │           ├── service/
-│   │           │   ├── UserService.java
-│   │           │   ├── ClientService.java
-│   │           │   ├── HotelOwnerService.java
-│   │           │   ├── SystemAdminService.java
-│   │           │   ├── HotelService.java
-│   │           │   ├── RoomService.java
-│   │           │   ├── ReservationService.java
-│   │           │   ├── RatingService.java
-│   │           │   ├── PromotionService.java
-│   │           │   ├── AuthService.java
-│   │           │   ├── JwtService.java
-│   │           │   └── impl/
-│   │           │       ├── UserServiceImpl.java
-│   │           │       ├── ClientServiceImpl.java
-│   │           │       ├── HotelOwnerServiceImpl.java
-│   │           │       ├── SystemAdminServiceImpl.java
-│   │           │       ├── HotelServiceImpl.java
-│   │           │       ├── RoomServiceImpl.java
-│   │           │       ├── ReservationServiceImpl.java
-│   │           │       ├── RatingServiceImpl.java
-│   │           │       ├── PromotionServiceImpl.java
-│   │           │       ├── AuthServiceImpl.java
-│   │           │       └── JwtServiceImpl.java
-│   │           ├── security/
-│   │           │   ├── JwtTokenProvider.java
-│   │           │   ├── JwtAuthenticationFilter.java
-│   │           │   ├── JwtAuthorizationFilter.java
-│   │           │   └── UserDetailsServiceImpl.java
-│   │           ├── util/
-│   │           │   ├── DateUtils.java
-│   │           │   ├── ValidationUtils.java
-│   │           │   └── PriceCalculator.java
-│   │           └── EasyStayApplication.java
-│   └── resources/
-│       ├── application.properties
-│       ├── application-dev.properties
-│       ├── application-prod.properties
-│       └── db/
-│           └── migration/
-│               ├── V1__create_tables.sql
-│               └── V2__insert_initial_data.sql
-└── test/
-    └── java/
-        └── com/
-            └── easysta/
-                ├── controller/
-                ├── service/
-                └── repository/
+    ├── java/
+    │   └── com/
+    │       └── easysta/
+    │           ├── config/
+    │           │   ├── SecurityConfig.java
+    │           │   ├── JwtConfig.java
+    │           │   ├── WebConfig.java
+    │           │   └── SwaggerConfig.java
+    │           ├── controller/
+    │           │   ├── AuthController.java
+    │           │   ├── UserController.java
+    │           │   ├── ClientController.java
+    │           │   ├── HotelOwnerController.java
+    │           │   ├── AdminController.java
+    │           │   ├── HotelController.java
+    │           │   ├── RoomController.java
+    │           │   ├── ReservationController.java
+    │           │   ├── RatingController.java
+    │           │   └── PromotionController.java
+    │           ├── dto/
+    │           │   ├── request/
+    │           │   │   ├── UserDTO.java
+    │           │   │   ├── LoginDTO.java
+    │           │   │   ├── HotelDTO.java
+    │           │   │   ├── RoomDTO.java
+    │           │   │   ├── ReservationDTO.java
+    │           │   │   ├── RatingDTO.java
+    │           │   │   ├── RegisterDTO.java
+    │           │   │   ├── AdminDTO.java
+    │           │   │   ├── ClientDTO.java
+    │           │   │   ├── HotelOwnerDTO.java
+    │           │   │   └── PromotionDTO.java
+    │           │   └── response/
+    │           │       ├── UserResponseDTO.java
+    │           │       ├── HotelResponseDTO.java
+    │           │       ├── RoomResponseDTO.java
+    │           │       ├── ReservationResponseDTO.java
+    │           │       ├── RatingResponseDTO.java
+    │           │       ├── PromotionResponseDTO.java
+    │           │       ├── JwtResponseDTO.java
+    │           │       └── ApiResponseDTO.java
+    │           ├── exception/
+    │           │   ├── GlobalExceptionHandler.java
+    │           │   ├── ResourceNotFoundException.java
+    │           │   ├── BadRequestException.java
+    │           │   ├── UnauthorizedException.java
+    │           │   └── ForbiddenException.java
+    │           ├── model/
+    │           │   ├── User.java
+    │           │   ├── Client.java
+    │           │   ├── HotelOwner.java
+    │           │   ├── SystemAdmin.java
+    │           │   ├── Hotel.java
+    │           │   ├── Room.java
+    │           │   ├── Reservation.java
+    │           │   ├── Rating.java
+    │           │   ├── Promotion.java
+    │           │   ├── RoomStatus.java
+    │           │   ├── PromotionStatus.java
+    │           │   ├── HotelStatus.java
+    │           │   └── enums/
+    │           │       ├── UserRole.java
+    │           │       ├── HotelStatus.java
+    │           │       ├── RoomStatus.java
+    │           │       ├── ReservationStatus.java
+    │           │       ├── PaymentStatus.java
+    │           │       ├── PromotionStatus.java
+    │           │       └── RoomType.java
+    │           ├── repository/
+    │           │   ├── UserRepository.java
+    │           │   ├── ClientRepository.java
+    │           │   ├── HotelOwnerRepository.java
+    │           │   ├── SystemAdminRepository.java
+    │           │   ├── HotelRepository.java
+    │           │   ├── RoomRepository.java
+    │           │   ├── ReservationRepository.java
+    │           │   ├── RatingRepository.java
+    │           │   ├── HotelRepository.java
+    │           │   └── PromotionRepository.java
+    │           ├── security/
+    │           │   ├── JwtTokenProvider.java
+    │           │   ├── JwtAuthenticationFilter.java
+    │           │   ├── JwtAuthorizationFilter.java
+    │           │   └── UserDetailsServiceImpl.java
+    │           ├── service/
+    │           │   ├── UserService.java
+    │           │   ├── ClientService.java
+    │           │   ├── HotelOwnerService.java
+    │           │   ├── SystemAdminService.java
+    │           │   ├── HotelService.java
+    │           │   ├── RoomService.java
+    │           │   ├── ReservationService.java
+    │           │   ├── RatingService.java
+    │           │   ├── PromotionService.java
+    │           │   ├── AuthService.java
+    │           │   └── JwtService.java
+    │           ├── util/
+    │           │   ├── DateUtils.java
+    │           │   ├── ValidationUtils.java
+    │           │   └── PriceCalculator.java
+    │           └── EasyStayApplication.java
+    └── resources/
+        ├── application.properties
+        ├── application-dev.properties
+        └── db/
+            └── migration/
+
 ```
 
 ## Domain Entities
@@ -171,49 +157,44 @@ src/
 
 ## API Endpoints
 
-### Authentication
-- `POST /api/auth/register` - Register a new user
-- `POST /api/auth/login` - Authenticate user and get token
+### Admin
+- `GET /api/admin` - Get admin
+- `POST /api/admin` - Create admin
 
-### Users
-- `GET /api/users/{id}` - Get user by ID
-- `PUT /api/users/{id}` - Update user
-- `DELETE /api/users/{id}` - Delete user (admin only)
+### Auth
+- `POST /api/auth` - Create auth
+
+### Clients
+- `GET /api/clients` - Get clients
+- `POST /api/clients` - Create clients
 
 ### Hotels
-- `GET /api/hotels` - Get all hotels
-- `GET /api/hotels/{id}` - Get hotel by ID
-- `POST /api/hotels` - Create new hotel (hotel owner only)
-- `PUT /api/hotels/{id}` - Update hotel (hotel owner only)
-- `DELETE /api/hotels/{id}` - Delete hotel (hotel owner only)
-- `GET /api/hotels/search` - Search hotels by criteria
+- `GET /api/hotels` - Get hotels
+- `POST /api/hotels` - Create hotels
 
-### Rooms
-- `GET /api/hotels/{hotelId}/rooms` - Get all rooms for a hotel
-- `GET /api/hotels/{hotelId}/rooms/{id}` - Get room by ID
-- `POST /api/hotels/{hotelId}/rooms` - Add room to hotel (hotel owner only)
-- `PUT /api/hotels/{hotelId}/rooms/{id}` - Update room (hotel owner only)
-- `DELETE /api/hotels/{hotelId}/rooms/{id}` - Delete room (hotel owner only)
-- `GET /api/hotels/{hotelId}/rooms/available` - Get available rooms for a date range
-
-### Reservations
-- `GET /api/reservations` - Get all reservations (client: own only, owner: hotel only)
-- `GET /api/reservations/{id}` - Get reservation by ID
-- `POST /api/reservations` - Create new reservation
-- `PUT /api/reservations/{id}` - Update reservation status
-- `DELETE /api/reservations/{id}` - Cancel reservation
-
-### Ratings
-- `GET /api/hotels/{hotelId}/ratings` - Get all ratings for a hotel
-- `POST /api/hotels/{hotelId}/ratings` - Add rating to hotel
-- `PUT /api/hotels/{hotelId}/ratings/{id}` - Update rating (own only)
-- `DELETE /api/hotels/{hotelId}/ratings/{id}` - Delete rating (own or admin only)
+### Hotel-owners
+- `GET /api/hotel-owners` - Get hotel owners
+- `POST /api/hotel-owners` - Create hotel owners
 
 ### Promotions
-- `GET /api/hotels/{hotelId}/promotions` - Get all promotions for a hotel
-- `POST /api/hotels/{hotelId}/promotions` - Add promotion (hotel owner only)
-- `PUT /api/hotels/{hotelId}/promotions/{id}` - Update promotion (hotel owner only)
-- `DELETE /api/hotels/{hotelId}/promotions/{id}` - Delete promotion (hotel owner only)
+- `GET /api/promotions` - Get promotions
+- `POST /api/promotions` - Create promotions
+
+### Ratings
+- `GET /api/ratings` - Get ratings
+- `POST /api/ratings` - Create ratings
+
+### Reservations
+- `GET /api/reservations` - Get reservations
+- `POST /api/reservations` - Create reservations
+
+### Rooms
+- `GET /api/rooms` - Get rooms
+- `POST /api/rooms` - Create rooms
+
+### Users
+- `GET /api/users` - Get users
+- `POST /api/users` - Create users
 
 ## Database Schema
 The database design follows the entity relationships defined in the class diagram. Key relationships include:
@@ -256,12 +237,6 @@ mvn spring-boot:run
 Once the application is running, access the Swagger UI at:
 ```
 http://localhost:8080/swagger-ui.html
-```
-
-## Testing
-```bash
-# Run all tests
-mvn test
 
 # Run specific test class
 mvn test -Dtest=HotelServiceTest
